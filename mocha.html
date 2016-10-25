@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mocha Testing</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Stylesheets go here. -->
+  <script src="https://use.fontawesome.com/bfd4e076b7.js"></script>
+  <script type="text/javascript" src="https://cdn.polyfill.io/v2/polyfill.min.js?features=fetch"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" />
+  <link href="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.css" rel="stylesheet" />
+  <!-- <link rel="stylesheet" type="text/css" href="css/global.css" /> -->
+</head>
+<body>
+    <div id="mocha"></div>
+  <!-- Content goes here. -->
+
+  <!-- Scripts go here. -->
+  <script src="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.js"></script>
+
+  <script type="text/javascript" src="chai.js"></script>
+  <script type="text/javascript" src="modom.js"></script>
+  <script>mocha.setup('bdd')</script> <!--This accesses the mocha namespace Library -->
+  <script type="text/javascript" src="mocha.js"></script> <!--This pulls our library for testing -->
+  <script> //--> This runs tests
+    mocha.checkLeaks();
+    mocha.globals(['jQuery']);
+    mocha.run();
+  </script>
+</body>
+</html>
