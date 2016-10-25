@@ -73,15 +73,15 @@ describe('MoDom', function() {
   // setHTML(): Set the innerHTML of an element
   describe('md.setHTML', function(){
     it('should return Tootsie Roll!', function(){
-      md.setHTML('.main h1', 'Tootsie Roll!')
-      expect(md.getHTML('.main h1')).to.contain('Tootsie Roll!')
+      md.setHTML('.main > h1', 'Tootsie Roll!')
+      expect(md.getHTML('.main > h1')).to.contain('Tootsie Roll!')
     })
   })
   //<---------End of Tests---------------->
   // getHTML(): Get the innerHTML of an element
   describe('md.getHTML', function(){
     it('should return Tootsie Roll!', function(){
-      expect(md.getHTML('.main h1')).to.contain('Tootsie Roll!')
+      expect(md.getHTML('.main > h1')).to.contain('Tootsie Roll!')
     })
   })
   //<---------End of Tests---------------->
